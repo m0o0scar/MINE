@@ -198,7 +198,7 @@ class VideoGenerator:
         cy = H * 0.5
         K = np.asarray([[fx, 0, cx],
                         [0, fy, cy],
-                        [0, 0, 1]], dtype=np.float)
+                        [0, 0, 1]], dtype=np.float64)
         return K
 
     def render_pose(self, G_tgt_src_np):
