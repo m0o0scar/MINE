@@ -272,7 +272,7 @@ def main():
     extra_config = json.loads(args.extra_config)
     config_path = os.path.join(os.path.dirname(args.checkpoint_path), "params.yaml")
     with open(config_path, "r") as f:
-        config = yaml.load(f)
+        config = yaml.safe_load(f)
         for k in extra_config.keys():
             assert k in config, k
         config.update(extra_config)
