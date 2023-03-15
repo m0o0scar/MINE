@@ -246,13 +246,11 @@ class VideoGenerator:
             rgb_clip = ImageSequenceClip(tgt_img_np_list, fps=self.traj_config["fps"])
             rgb_clip.write_videofile(os.path.join(self.output_dir, output_name+"_"+name+"_rgb.mp4"),
                                      fps=self.traj_config["fps"],
-                                     verbose=False,
-                                     logger=None)
+                                     verbose=False)
             disp_clip = ImageSequenceClip(tgt_disp_np_list, fps=self.traj_config["fps"])
             disp_clip.write_videofile(os.path.join(self.output_dir, output_name+"_"+name + "_disp.mp4"),
                                       fps=self.traj_config["fps"],
-                                      verbose=False,
-                                      logger=None)
+                                      verbose=False)
 
 
 def main():
